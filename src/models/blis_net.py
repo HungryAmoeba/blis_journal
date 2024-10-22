@@ -410,12 +410,13 @@ class BlisNet(LightningModule):
         return {"optimizer": optimizer}
 
 if __name__ == '__main__':
-    model = BlisNet(1, 1, 1, 1, True, 1, ['blis', 'blis', 'blis'])
+    model = BlisNet(2, 1, 1, 1, True, 3, ['blis', 'blis', 'blis'])
 
     import pdb; pdb.set_trace()
 
     # Example usage
     num_outputs = 2
     num_nodes = 10
+
 
     
