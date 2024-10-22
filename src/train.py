@@ -56,7 +56,7 @@ def train(cfg: DictConfig) -> Tuple[Dict[str, Any], Dict[str, Any]]:
 
     log.info(f"Instantiating datamodule <{cfg.data._target_}>")
     datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
-
+    import pdb; pdb.set_trace()
     log.info(f"Instantiating model <{cfg.model._target_}>")
     model: LightningModule = hydra.utils.instantiate(cfg.model)
 
@@ -114,6 +114,7 @@ def main(cfg: DictConfig) -> Optional[float]:
     """
     # apply extra utilities
     # (e.g. ask for tags if none are provided in cfg, print cfg tree, etc.)
+    import pdb; pdb.set_trace()
     extras(cfg)
 
     # train the model
